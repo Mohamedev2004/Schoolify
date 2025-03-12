@@ -21,4 +21,4 @@ const StudentPage = () => {
     )
   }
   
-  export default StudentPage
+  export default StudentPage;
