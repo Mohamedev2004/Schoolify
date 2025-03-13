@@ -63,4 +63,4 @@ const AttendanceChart = () => {
   )
 }
 
-export default AttendanceChart
+export default AttendanceChart;

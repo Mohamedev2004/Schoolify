@@ -14,4 +14,4 @@ const UserCard = ({type} : {type:string}) => {
   )
 }
 
-export default UserCard
+export default UserCard;

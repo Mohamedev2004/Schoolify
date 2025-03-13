@@ -10,4 +10,4 @@ const TableSearch = () => {
   )
 }
 
-export default TableSearch
+export default TableSearch;

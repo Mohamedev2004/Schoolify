@@ -63,4 +63,4 @@ const EventCalendar = () => {
   )
 }
 
-export default EventCalendar
+export default EventCalendar;

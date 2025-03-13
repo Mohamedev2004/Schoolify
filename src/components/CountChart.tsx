@@ -59,4 +59,4 @@ const CountChart = () => {
   )
 }
 
-export default CountChart
+export default CountChart;
