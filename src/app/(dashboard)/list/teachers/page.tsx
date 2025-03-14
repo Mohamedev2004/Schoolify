@@ -5,6 +5,7 @@ import Table from "@/components/Table";
 import Image from "next/image";
 import { role, teachersData } from "@/lib/data";
 import Link from "next/link";
+import FormModal from "@/components/FormModal";
 
 
 type Teacher = {
@@ -21,7 +22,7 @@ type Teacher = {
 
 const columns = [
   {header:"info", accessor:"info"},
-  {header:"Teache ID", accessor:"teacherId", className:"hidden md:table-cell"},
+  {header:"Teacher ID", accessor:"teacherId", className:"hidden md:table-cell"},
   {header:"Subjects", accessor:"subjects", className:"hidden md:table-cell"},
   {header:"Classes", accessor:"classes", className:"hidden md:table-cell"},
   {header:"Phone", accessor:"phone", className:"hidden lg:table-cell"},
@@ -56,9 +57,10 @@ const TeacherListPage = () => {
             </button>
           </Link>
           {role === "admin" && (
-            <button className="w-8 h-8 rounded-full flex items-center justify-center bg-school">
+            /* <button className="w-8 h-8 rounded-full flex items-center justify-center bg-school">
               <Image src="/delete.svg" alt="" width={16} height={16}/>
-            </button>
+            </button> */
+            <FormModal table={"teacher"} type={"delete"} id={item.id}/>
           )}
         </div>
       </td>
@@ -80,10 +82,11 @@ const TeacherListPage = () => {
               <Image src="/sort.png" alt="" width={14} height={14}/>
             </button>
             {role === "admin" && (
-                  <button className="w-8 h-8 flex items-center justify-center rounded-full bg-school">
+                  /* <button className="w-8 h-8 flex items-center justify-center rounded-full bg-school">
                       <Image src="/plus.png" alt="" width={14} height={14}/>
-                  </button>
-              )}
+                  </button> */
+                  <FormModal table={"teacher"} type={"create"}/>
+            )}
           </div>
         </div>
       </div>

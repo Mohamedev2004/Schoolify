@@ -5,7 +5,7 @@ import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
 
 const data = [
   { name: 'Group A', value: 92, fill:"#FAD22C"},
-  { name: 'Group B', value: 8, fill:"857de3"},
+  { name: 'Group B', value: 8, fill:"#857de3"},
 ];
 
 const Performance = () => {

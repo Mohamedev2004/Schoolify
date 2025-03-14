@@ -5,6 +5,8 @@ import Table from "@/components/Table";
 import Image from "next/image";
 import { role, eventsData} from "@/lib/data";
 import Link from "next/link";
+import FormModal from "@/components/FormModal";
+
 
 
 type Event = {
@@ -42,15 +44,14 @@ const EventListPage = () => {
       <td className="hidden md:table-cell">{item.endTime}</td>
       <td>
         <div className="flex items-center gap-2">
-          <Link href={`/list/teachers/${item.id}`}>
-            <button className="w-7 h-7 rounded-full flex items-center justify-center bg-schoolify">
-              <Image src="/edit.png" alt="" width={16} height={16}/>
-            </button>
-          </Link>
           {role === "admin" && (
-            <button className="w-8 h-8 rounded-full flex items-center justify-center bg-school">
+            /* <button className="w-8 h-8 rounded-full flex items-center justify-center bg-school">
               <Image src="/delete.svg" alt="" width={16} height={16}/>
-            </button>
+            </button> */
+            <>
+              <FormModal table={"event"} type={"update"} data={item}/>
+              <FormModal table={"event"} type={"delete"} id={item.id}/>
+            </>
           )}
         </div>
       </td>
@@ -72,9 +73,11 @@ const EventListPage = () => {
               <Image src="/sort.png" alt="" width={14} height={14}/>
             </button>
             {role === "admin" && (
-                <button className="w-8 h-8 flex items-center justify-center rounded-full bg-school">
+                /* <button className="w-8 h-8 flex items-center justify-center rounded-full bg-school">
                     <Image src="/plus.png" alt="" width={14} height={14}/>
-                </button>
+                </button> */
+              <FormModal table={"event"} type={"create"}/>
+
             )}
           </div>
         </div>

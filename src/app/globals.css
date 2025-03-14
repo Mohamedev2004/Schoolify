@@ -94,3 +94,8 @@
         margin-top: 1px !important;
     }
 }
+
+select option:hover {
+    background-color: #857de3 !important; /* Custom hover background */
+    color: black !important; /* Custom hover text */
+}
