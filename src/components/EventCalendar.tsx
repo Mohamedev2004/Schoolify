@@ -49,7 +49,7 @@ const EventCalendar = () => {
               <h1 className="font-semibold text-gray-600 text-sm">{event.title}</h1>
               <span
                 className={`text-xs text-white whitespace-nowrap rounded-md px-2 py-1 ${
-                  index % 2 === 0 ? "bg-schoolify" : "bg-school text-black"
+                  index % 2 === 0 ? "bg-schoolify" : "bg-school !text-black"
                 }`}
               >
                 {event.time}
