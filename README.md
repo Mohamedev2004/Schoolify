@@ -49,5 +49,6 @@ Make sure you have the following installed:
 
 
 NB: still working on the auth, i don't get it yet with clerk
+something about the middleware isn't right
 
 
