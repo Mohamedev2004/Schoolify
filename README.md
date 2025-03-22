@@ -48,3 +48,6 @@ Make sure you have the following installed:
 - [Git](https://git-scm.com/)
 
 
+NB: still working on the auth, i don't get it yet with clerk
+
+
